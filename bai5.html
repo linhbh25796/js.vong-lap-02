@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<form>
+    Nhập tiền ban đầu: <input id="tienBanDau" type="text"> <br>
+    Nhập số tháng vay : <input id="soThangVay" type="text"> <br>
+    Nhập số lãi : <input style="width: 210px" id="laiSuat" type="text" placeholder="Nhập số thập phân <1 (10% = 0.1)">
+    <br>
+    <button type="button" onclick="tinhLai()">Xem</button>
+    <p id="result">Result</p>
+</form>
+<script>
+
+    function tinhLai() {
+        let total;
+        let tienBanDau =parseFloat( document.getElementById("tienBanDau")).value;
+        let soThang = parseFloat( document.getElementById("soThangVay")).value;
+        let soLai = parseFloat( document.getElementById("laiSuat")).value;
+        for (let i = 0;i<=soThang; i++){
+            total = total + total*soLai;
+        }
+        // for (let i = 0 = ; i < soThang; i++) {
+        //     total += tienBanDau * soLai;
+        // }
+        document.getElementById("result").innerHTML = "Tổng số tiền : "+total;
+    }
+</script>
+
+</body>
+</html>

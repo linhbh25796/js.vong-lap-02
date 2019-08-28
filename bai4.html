@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let chieuRong = prompt("nhập chiều rộng: ");
+    let chieuDai = prompt("nhập chiều dài: ");
+    
+    function inHcnRong() {
+        for (let i =0;i<chieuRong;i++){
+            for (let j=0 ; j<chieuDai;j++){
+                if (i === 0 || i === chieuRong-1 || j===0 || j === chieuDai-1){
+                    document.write("*");
+                }else {
+                    document.write("_");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+    inHcnRong();
+</script>
+</body>
+</html>

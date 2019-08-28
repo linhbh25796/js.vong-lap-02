@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+
+<form method="post">
+
+    <input type="text" name="input">
+    <input type="button" onclick="tinhGiaiThua(this.form)" value="Tính">
+    <input type="text" size="40" maxlength="40" name="result">
+</form>
+<p> Tính giai thừa của một số nguyên dương </p>
+
+<script>
+
+    let heSo = 1;
+
+    function tinhGiaiThua(form) {
+        let number = form.input.value;
+        let n = number;
+        for (i = n; i > 0; i--) {
+            if (n > 170) {
+                form.result.value = "Số quá lớn!!";
+            } else {
+                if (i === n) {
+                    heSo = i;
+                } else {
+                    heSo = heSo * (i);
+                }
+                form.result.value = heSo;
+            }
+
+        }
+
+        return heSo;
+    }
+
+
+</script>
+</body>
+</html>
